@@ -1,0 +1,381 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Customized  Scroll  */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--c2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--c1);
+}
+
+/* End of Customized  Scroll  */
+
+
+
+.nodrag{
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -ms-user-select: none;
+}
+
+:root {
+    --c1: #ffffff;
+    /*     white       */
+    --c2: #000000;
+    /*     black       */
+    --c3: #cccccc;
+    /*                 */
+    --c4: ;
+    /*                 */
+    --c5: ;
+    /*                 */
+    --c6: ;
+    /*                 */
+    --c7: ;
+    /*                 */
+    --c8: ;
+    /*                 */
+    --c9: ;
+    /*                 */
+    --c10: ;
+}
+
+.c1 {
+    color: #ffffff;
+}
+
+.c2 {
+    color: #000000;
+}
+
+.c3 {
+    color: #cccccc;
+}
+
+.c4 {
+    color: ;
+}
+
+.c5 {
+    color: ;
+}
+
+.c6 {
+    color: ;
+}
+
+.c7 {
+    color: ;
+}
+
+.c8 {
+    color: ;
+}
+
+.c9 {
+    color: ;
+}
+
+.c10 {
+    color: ;
+}
+
+
+.bgc1 {
+    background-color: #ffffff;
+}
+
+.bgc2 {
+    background-color: #000000;
+}
+
+.bgc3 {
+    background-color: #cccccc;
+}
+
+.bgc4 {
+    background-color: ;
+}
+
+.bgc5 {
+    background-color: ;
+}
+
+.bgc6 {
+    background-color: ;
+}
+
+.bgc7 {
+    background-color: ;
+}
+
+.bgc8 {
+    background-color: ;
+}
+
+.bgc9 {
+    background-color: ;
+}
+
+.bgc10 {
+    background-color: ;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*Fonts for Css*/
+
+
+.fon1 {}
+
+.fon2 {}
+
+.fon3 {}
+
+/*End of fonts section   */
+
+
+/*  Media Queries     */
+
+
+
+
+@media only screen and (max-width: 575px) {}
+
+/*Mobile Devices*/
+@media only screen and (max-width: 480px) {}
+
+/*Sm Devices*/
+@media only screen and (max-width: 768px) {}
+
+/*medium devices*/
+@media only screen and (max-width: 1024px) {}
+
+/*Large devices*/
+@media only screen and (min-width: 1281px) {}
+
+
+/* End of Media Queries     */
+
+
+/*Nav bar start*/
+
+
+
+                                    /*  --------------------------- Codes Start's From Here ---------------------------------*/
+.zmore{
+    z-index: 10;
+}
+
+#particles-js {
+    position: absolute;
+    width: 95%;
+    z-index: 20;
+}
+
+#sec1{
+    top: 10%;
+    background-color: var(--c1);
+    padding: 5%;
+}
+
+
+#sec2{
+    background-color: var(--c2);
+    padding: 5%;
+    z-index: 10;
+}
+
+
+.the{
+    font-size: 4em;
+    position: relative;
+    top: -50px;
+}
+
+.diff{
+    font-size: 4em;
+    position: relative;
+    top: -70px;
+}
+
+.node{
+    font-size: 4em;
+    position: relative;
+    top: -80px;
+}
+
+.nexus{
+    font-size: 4em;
+     position: relative;
+    top: -40px;
+    left: 5px;
+}
+
+.ln{
+    font-size: 1.5em;
+}
+
+
+.sideimg{
+    position: relative;
+    top: 80px;
+}
+
+#sec3{
+    background-color: var(--c1);
+    padding: 5%;
+}
+
+
+.ns{
+    font-size: 4em;
+}
+
+
+
+.succ{
+  transform: rotate(-10deg);
+    position: relative;
+    top: -120px;
+    left: 40px;
+}
+
+.arrow{
+    position: relative;
+    top: -80px;
+    right: 50px;
+    
+}
+
+
+#sec4{
+    background: var(--c2);
+    padding: 5%;
+}
+
+.wel{
+    font-size: 2em;
+}
+
+
+#projectsec1{
+    background-image: url(pictures/bg1.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.imgnn{
+    position: relative;
+    left: -100px;
+    top: -38px;
+}
+
+
+.wwd{
+    position: relative;
+    top: 80px;
+    left: -280px;
+}
+
+.wwdtitle{
+    font-size: 2.5em;
+}
+
+.nns{
+}
+
+
+
+#projectsec2{
+    background-color: var(--c2);
+/*    padding: 5%;*/
+}
+
+#projectsec3{
+    background-color: var(--c3);
+/*    padding: 5%;*/
+}
+
+
+#speakersec1{
+    background-image: url(pictures/bg2.jpg);
+    width: 100%;
+    height: 80%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bgframe{
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    position: relative;
+    top: 200px;
+
+}
+
+.speakerbg1{
+ background-color: var(--c2);
+    padding: 5%;
+}
+
+.speakerbg2{
+ background-color: var(--c1);
+    padding: 5%;
+}
+
+#venusec1{
+    background-image: url(pictures/bg2.jpg);
+    width: 100%;
+    height: 80%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#venuesec2{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
