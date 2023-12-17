@@ -25,7 +25,7 @@ body {
 
 
 
-.nodrag{
+.nodrag {
     user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -165,13 +165,118 @@ a {
 @media only screen and (max-width: 575px) {}
 
 /*Mobile Devices*/
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
 
-/*Sm Devices*/
-@media only screen and (max-width: 768px) {}
+    .nnxxs {
+        width: 30%;
+    }
 
-/*medium devices*/
-@media only screen and (max-width: 1024px) {}
+    .imgnn {
+        width: 50% !important;
+        left: -10px !important;
+        top: 8px !important;
+    }
+
+    .wwd {
+        top: -90px !important;
+        left: 12% !important;
+        font-size: .8em;
+    }
+
+    .arrow {
+        width: 20% !important;
+        left: 20%;
+        top: 0px !important;
+    }
+
+    .ns {
+        font-size: 3em !important;
+    }
+
+    .succ {
+        top: -25px !important;
+        left: 40px;
+    }
+
+    .sideimg {
+        position: relative;
+        top: 0px !important;
+        width: 50% !important;
+    }
+
+    .descsx {
+        position: relative;
+        top: -50px;
+    }
+    
+    .the,.diff,.node,.nexus{
+    font-size: 3.5em !important;
+}
+    
+    
+    .ns{
+    font-size: 3em !important;
+}
+
+
+
+.succ {
+    transform: rotate(-10deg);
+    position: relative;
+    top: -30px !important;
+    left: 0px !important;
+}
+
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .wwd {
+        left: 0px !important;
+        width: 100%;
+        top: -80px !important;
+    }
+
+    .imgnn {
+        width: 100% !important;
+        left: -40px !important;
+        top: 8px !important;
+    }
+        .sideimg {
+        width: 200% !important;
+        top: 225px !important;
+    }
+    
+    
+.the,.diff,.node,.nexus{
+    font-size: 3em !important;
+}
+
+.ns{
+    font-size: 5em !important;
+}
+
+
+
+.succ {
+    transform: rotate(-10deg);
+    position: relative;
+    top: -50px !important;
+    left: 0px !important;
+}
+.arrow {
+    top: 10px !important;
+    width:150%;
+    left: 100%;
+}
+
+
+
+
+    }
+
+
 
 /*Large devices*/
 @media only screen and (min-width: 1281px) {}
@@ -184,8 +289,8 @@ a {
 
 
 
-                                    /*  --------------------------- Codes Start's From Here ---------------------------------*/
-.zmore{
+/*  --------------------------- Codes Start's From Here ---------------------------------*/
+.zmore {
     z-index: 10;
 }
 
@@ -195,93 +300,187 @@ a {
     z-index: 20;
 }
 
-#sec1{
+#sec1 {
     top: 10%;
     background-color: var(--c1);
     padding: 5%;
 }
 
+.logorotate {
+    animation: logorotate 7s ease-out infinite;
+}
 
-#sec2{
+@keyframes logorotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    70% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+#sec2 {
     background-color: var(--c2);
     padding: 5%;
     z-index: 10;
 }
 
 
-.the{
+.the {
     font-size: 4em;
     position: relative;
     top: -50px;
 }
 
-.diff{
+.diff {
     font-size: 4em;
     position: relative;
     top: -70px;
 }
 
-.node{
+.node {
     font-size: 4em;
     position: relative;
     top: -80px;
 }
 
-.nexus{
+.nexus {
     font-size: 4em;
-     position: relative;
+    position: relative;
     top: -40px;
     left: 5px;
 }
 
-.ln{
+.ln {
     font-size: 1.5em;
 }
 
 
-.sideimg{
+.sideimg {
     position: relative;
     top: 80px;
 }
 
-#sec3{
+#sec3 {
     background-color: var(--c1);
     padding: 5%;
 }
 
 
-.ns{
+.ns {
     font-size: 4em;
 }
 
 
 
-.succ{
-  transform: rotate(-10deg);
+.succ {
+    transform: rotate(-10deg);
     position: relative;
     top: -120px;
     left: 40px;
 }
 
-.arrow{
+.arrow {
     position: relative;
     top: -80px;
     right: 50px;
-    
+
 }
 
 
-#sec4{
+#sec4 {
     background: var(--c2);
     padding: 5%;
 }
 
-.wel{
+.wel {
     font-size: 2em;
 }
 
 
-#projectsec1{
+.custom-container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main" "footer";
+    overflow-x: hidden;
+    background: #000;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+    z-index: 1;
+    --footer-background: #34a4e8;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+.bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+               bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+.content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+
+/* Add styles for links, b, p, and other elements */
+
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+
+
+#projectsec1 {
     background-image: url(pictures/bg1.jpg);
     width: 100%;
     height: 100%;
@@ -292,40 +491,39 @@ a {
 }
 
 
-.imgnn{
+.imgnn {
     position: relative;
     left: -100px;
     top: -38px;
 }
 
 
-.wwd{
+.wwd {
     position: relative;
     top: 80px;
     left: -280px;
 }
 
-.wwdtitle{
+.wwdtitle {
     font-size: 2.5em;
 }
 
-.nns{
-}
+.nns {}
 
 
 
-#projectsec2{
+#projectsec2 {
     background-color: var(--c2);
-/*    padding: 5%;*/
+    /*    padding: 5%;*/
 }
 
-#projectsec3{
+#projectsec3 {
     background-color: var(--c3);
-/*    padding: 5%;*/
+    /*    padding: 5%;*/
 }
 
 
-#speakersec1{
+#speakersec1 {
     background-image: url(pictures/bg2.jpg);
     width: 100%;
     height: 80%;
@@ -335,25 +533,25 @@ a {
     background-repeat: no-repeat;
 }
 
-.bgframe{
-    background-color: rgba(0,0,0,0.5);
+.bgframe {
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     position: relative;
     top: 200px;
 
 }
 
-.speakerbg1{
- background-color: var(--c2);
+.speakerbg1 {
+    background-color: var(--c2);
     padding: 5%;
 }
 
-.speakerbg2{
- background-color: var(--c1);
+.speakerbg2 {
+    background-color: var(--c1);
     padding: 5%;
 }
 
-#venusec1{
+#venusec1 {
     background-image: url(pictures/bg2.jpg);
     width: 100%;
     height: 80%;
@@ -363,19 +561,4 @@ a {
     background-repeat: no-repeat;
 }
 
-#venuesec2{
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+#venuesec2 {}
