@@ -248,11 +248,12 @@ a {
     }
 
     .nn {
-        font-size: 1.8em !important;
+        font-size: .3em !important;
     }
 
     .navsuc {
-        font-size: 2em !important;
+        font-size: 3em !important;
+        padding-top: 10% !important;
     }
 
     .header__marq-txt {
@@ -444,10 +445,12 @@ section {
     z-index: 2;
 }
 
+/*
 .title_paralax {
     display: inline-block;
     will-change: transform;
 }
+*/
 
 .title .stroke {
     display: inline-block;
@@ -910,7 +913,7 @@ section {
 }
 
 .nn {
-    font-size: 6em;
+    font-size: 1em;
     color: var(--c1);
 }
 

@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function sec() {
 
-        gsap.to('.nn', {
+        gsap.to('.title', {
             scrollTrigger: {
                 trigger: '#firstsec',
                 start: 'top top',
