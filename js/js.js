@@ -89,8 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
     function header() {
 
         gsap.to('.header .stroke', {
@@ -141,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function about() {
         gsap.from('.about__img', {
             scrollTrigger: {
-                trigger: '.about',
+                trigger: '#secondsec',
                 start: 'top bottom',
                 scrub: 1.9
             },
@@ -149,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         gsap.from('.about__img img', {
             scrollTrigger: {
-                trigger: '.about',
+                trigger: '#secondsec',
                 start: 'top bottom',
                 scrub: 1.9
             },
@@ -161,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 start: 'top bottom',
                 scrub: 1.9
             },
-            yPercent: 50
+            yPercent: 40
         })
     }
     about();
