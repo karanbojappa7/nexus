@@ -88,6 +88,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    function discover() {
+        gsap.from('.discover__head', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '#thirdsec',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+    }
+    discover();
+
+
+
+    //benefits
+    function benefits() {
+        gsap.from('.benefits__num', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.benefits__list',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+    }
+    benefits();
+
+
+
 
     function header() {
 
@@ -164,19 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     about();
 
-
-    //benefits
-    function benefits() {
-        gsap.from('.benefits__num', {
-            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-            scrollTrigger: {
-                trigger: '.benefits__list',
-                start: 'top bottom',
-                scrub: 1.9
-            }
-        })
-    }
-    benefits();
 
 
     //portfolio
