@@ -1039,6 +1039,15 @@ section {
 }
 
 
+
+.footer{
+     cursor: pointer;
+}
+
+.footer:hover .cursor{
+    display: none;
+}
+
 .footer-col ul {
     list-style: none;
     padding: 3px;
@@ -1076,3 +1085,4 @@ section {
     color: var(--c1) !important;
     transition: .5s;
 }
+

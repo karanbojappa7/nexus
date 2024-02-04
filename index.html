@@ -192,7 +192,7 @@
   	 		</div>
   	 		<div class="footer-col col-sm-4">
                 <strong class="text-center"><span class="c1 fs-3">follow us</span> </strong>
-  	 			<div class="social-links">
+  	 			<div class="social-links pt-4">
   	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
   	 				<a href="#"><i class="fab fa-twitter"></i></a>
   	 				<a href="#"><i class="fab fa-instagram"></i></a>
@@ -272,8 +272,8 @@
 
 
     <script>
-        //        Splitting();
-        //        luxy.init();
+                Splitting();
+                luxy.init();
 
     </script>
 
@@ -305,6 +305,21 @@
         circle.raduis(360);
 
     </script>
+    
+    <script>
+$(document).ready(function() {
+    $('.footer').hover(
+        function() {
+            $('.cursor').hide();
+        },
+        function() {
+            $('.cursor').show(); 
+        }
+    );
+});
+</script>
+    
+    
 
 
 </body>
