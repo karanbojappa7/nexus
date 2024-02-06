@@ -218,9 +218,50 @@
 
     <script>
         Splitting();
-        //                luxy.init();
+        // luxy.init();
 
     </script>
+        <div class="cursor">
+        <div id="Circle-Txt">
+            ✦Nexus✦Node
+        </div>
+
+    </div>
+
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+
+
+
+        let circle = new CircleType(document.getElementById('Circle-Txt'));
+        circle.raduis(360);
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.footer').hover(
+                function() {
+                    $('.cursor').hide();
+                },
+                function() {
+                    $('.cursor').show();
+                }
+            );
+        });
+    </script>
+
 </body>
 
 </html>
