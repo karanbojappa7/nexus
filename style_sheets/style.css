@@ -5,7 +5,7 @@ html {
 body {
     background: var(--second-color);
     overflow-x: hidden;
-    cursor: none;
+/*    cursor: none;*/
 }
 
 /******************************************/
@@ -345,6 +345,12 @@ section {
 */
 
 .wrapp {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+.wrapp2 {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -737,47 +743,7 @@ section {
 
 
 
-#projectsec1 {
-    background-image: url(pictures/bg1.jpg);
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
 
-
-.imgnn {
-    position: relative;
-    left: -100px;
-    top: -38px;
-}
-
-
-.wwd {
-    position: relative;
-    top: 80px;
-    left: -280px;
-}
-
-.wwdtitle {
-    font-size: 2.5em;
-}
-
-.nns {}
-
-
-
-#projectsec2 {
-    background-color: var(--c2);
-    /*    padding: 5%;*/
-}
-
-#projectsec3 {
-    background-color: var(--c3);
-    /*    padding: 5%;*/
-}
 
 
 #speakersec1 {
@@ -1085,4 +1051,108 @@ section {
     color: var(--c1) !important;
     transition: .5s;
 }
+
+
+
+
+
+
+/*project*/
+
+
+.anim{
+	margin:0;
+/*	background:#15151e;*/
+	overflow-x:hidden;
+}
+
+
+
+.races {
+	width:fit-content;
+	display:flex;
+	flex-wrap:nowrap;
+    
+}
+
+.imgcontain{
+    width: 100%;
+    height: 100vh;
+    
+}
+.races img{
+    width: 850px;
+    height: 850px;
+    padding-bottom: 20%;
+}
+
+
+.lightBG {
+	background:#313143;
+}
+
+
+.space-50vh {
+	height:50vh;
+}
+
+.space-100vh {
+	height:100vh;
+}
+#projectsec1 {
+    background-image: url(pictures/bg1.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.imgnn {
+    position: relative;
+    left: -100px;
+    top: -38px;
+}
+
+
+.wwd {
+    position: relative;
+    top: 80px;
+    left: -280px;
+}
+
+.wwdtitle {
+    font-size: 2.5em;
+}
+
+.nns {}
+
+
+
+#projectsec2 {
+    background-color: var(--c2);
+    /*    padding: 5%;*/
+}
+
+#projectsec3 {
+    background-color: var(--c3);
+    /*    padding: 5%;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
