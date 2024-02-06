@@ -2,12 +2,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     'use strict';
 
+    function setupRacesScroll() {
+        const races = document.querySelector(".races");
+        if (!races) return; // Ensure .races element exists
 
-    //
-    //    Splitting();
-    //    luxy.init();
-    //    gsap.registerPlugin(ScrollTrigger);
+        function getScrollAmount() {
+            let racesWidth = races.scrollWidth;
+            return -(racesWidth - window.innerWidth);
+        }
 
+        const tween = gsap.to(races, {
+            x: getScrollAmount,
+            duration: 3,
+            ease: "none",
+        });
+
+        ScrollTrigger.create({
+            trigger: ".racesWrapper",
+            start: "top 10%",
+            end: () => `+=${getScrollAmount() * -1}`,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            invalidateOnRefresh: true,
+            markers: true
+        });
+    }
+
+    // Call the function to setup races scroll
+    setupRacesScroll();
+    
     const gTl = gsap.timeline();
     gTl.from(".title .char", 1, {
         opacity: 0,
@@ -88,34 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     
-    const races = document.querySelector(".races");
-//console.log(races.offsetWidth)
 
-function getScrollAmount() {
-	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth);
-}
-
-const tween = gsap.to(races, {
-	x: getScrollAmount,
-	duration: 5,
-	ease: "none",
-});
-
-
-ScrollTrigger.create({
-	trigger:".racesWrapper",
-	start:"top 10%",
-	end: () => `+=${getScrollAmount() * -1}`,
-	pin:true,
-	animation:tween,
-	scrub:1,
-	invalidateOnRefresh:true,
-//	markers:true
-})
-
-    
-    
     
     
     
@@ -227,55 +224,6 @@ ScrollTrigger.create({
     about();
 
 
-
-    //portfolio
-    function portfolio() {
-        gsap.from('.work__item, .work__item-num', {
-            y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-            scrollTrigger: {
-                trigger: '.work',
-                start: 'top bottom',
-                scrub: 1.9
-            }
-        })
-        gsap.from('.work__item-img img', {
-            scale: 1.6,
-            scrollTrigger: {
-                trigger: '.work__wrapp',
-                start: 'top bottom',
-                scrub: 1.9
-            }
-        })
-    }
-    portfolio();
-
-
-    //serv
-    function serv() {
-        gsap.from('.serv__item-arrow', {
-            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-            scrollTrigger: {
-                trigger: '.serv__list',
-                start: 'top bottom',
-                scrub: 1.9
-            }
-        })
-    }
-    serv();
-
-
-    //footer
-    function footer() {
-        gsap.from('.footer__div span', {
-            y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-            opacity: 0,
-            scrollTrigger: {
-                trigger: '.footer',
-                start: 'top bottom',
-                end: 'bottom bottom',
-                scrub: 1.9
-            }
-        })
-    }
-    footer();
 });
+
+
