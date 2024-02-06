@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             animation: tween,
             scrub: 1,
             invalidateOnRefresh: true,
-            markers: true
+//            markers: true
         });
     }
 
