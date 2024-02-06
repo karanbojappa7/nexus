@@ -117,13 +117,13 @@
                 </h2>
 
                 <div class="col-sm-11 test">
-                    
+
                     <span class="discover__head text-center" data-speed="-150">Unleash Your Creativity </span>
-                    
+
                     <div class="fs-5 c6">Nexus Node is the space where your wildest ideas find wings. Our creative experts are here to collaborate with you, fueling your imagination to its fullest potential. Whether you need branding that leaves a mark or innovative designs that captivate, we've got the solutions you seek. </div>
 
                     <span class="discover__head text-center" data-speed="-150">Innovate with Us </span>
-                    
+
                     <div class="fs-5 c6">
                         Innovation is at the core of Nexus Node. We thrive on staying ahead of the curve and delivering cutting-edge solutions. Our team is constantly exploring new technologies and design trends to keep your brand at the forefront of your industry. When you partner with us, innovation becomes your ally.
                     </div>
@@ -169,55 +169,48 @@
 
 
 
-  <footer class="footer">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="footer-col col-sm-4">
-  	 			 <strong class="text-center"><span class="c1 fs-3">Company</span> </strong>
-  	 			<ul>
-  	 				<li><a href="Projects.html">Projects</a></li>
-  	 				<li><a href="speakers.html">Speakers</a></li>
-  	 				<li><a href="venue.html">Venue</a></li>
-  	 			</ul>
-  	 		</div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-sm-4">
+                        <strong class="text-center"><span class="c1 fs-3">Company</span> </strong>
+                        <ul>
+                            <li><a class="cufix" href="Projects.html">Projects</a></li>
+                            <li><a class="cufix" href="speakers.html">Speakers</a></li>
+                            <li><a class="cufix" href="venue.html">Venue</a></li>
+                        </ul>
+                    </div>
 
-  	 		<div class="footer-col col-sm-4">
-                 <strong class="text-center"><span class="c1 fs-3">online shop</span> </strong>
-  	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col col-sm-4">
-                <strong class="text-center"><span class="c1 fs-3">follow us</span> </strong>
-  	 			<div class="social-links pt-4">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
-  	 			</div>
-  	 		</div>
-  	 	</div>
-  	 </div>
-      <div class="text-center c6 pt-5 pb-1">© 2020. Nexus Node
-</div>
-  </footer>
-
-
-
-
-
-
-
+                    <div class="footer-col col-sm-4">
+                        <strong class="text-center"><span class="c1 fs-3">online shop</span> </strong>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-sm-4">
+                        <strong class="text-center"><span class="c1 fs-3">follow us</span> </strong>
+                        <div class="social-links pt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center c6 pt-5 pb-1">© 2020. Nexus Node
+            </div>
+        </footer>
 
     </div>
 
     <!----------------------------- Codes End's Here ----------------------------------->
 
 
-<!--
+    <!--
 
     <div class="btn p-3 upbtn">
         <i class="fa fa-caret-up" aria-hidden="true"></i>
@@ -272,8 +265,8 @@
 
 
     <script>
-                Splitting();
-                luxy.init();
+        Splitting();
+        luxy.init();
 
     </script>
 
@@ -304,22 +297,20 @@
         let circle = new CircleType(document.getElementById('Circle-Txt'));
         circle.raduis(360);
 
+        $(document).ready(function() {
+            $('.footer').hover(
+                function() {
+                    $('.cursor').hide();
+                },
+                function() {
+                    $('.cursor').show();
+                }
+            );
+        });
+
     </script>
-    
-    <script>
-$(document).ready(function() {
-    $('.footer').hover(
-        function() {
-            $('.cursor').hide();
-        },
-        function() {
-            $('.cursor').show(); 
-        }
-    );
-});
-</script>
-    
-    
+
+
 
 
 </body>
