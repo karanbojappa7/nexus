@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "expo.out"
     }, "-=1.5");
 
-    const gsapSq = gsap.utils.toArray('.section-title__square');
+    const gsapSq = gsap.utils.toArray('.section-title__square, .section-title__square2');
     gsapSq.forEach((gSq, i) => {
         const rotat = gsap.from(gSq, 3, {
             rotation: 720
