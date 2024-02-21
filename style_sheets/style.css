@@ -30,7 +30,6 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: 'Syne', sans-serif;
     font-weight: 800;
     margin: 0;
     padding: 0;
@@ -60,7 +59,7 @@ body {
     /*                 */
     --c4: #FA9700;
     /*                 */
-    --c5: ;
+    --c5: #0a0a0a;
     /*                 */
     --c6: #4b4b4b;
     /*                 */
@@ -95,7 +94,7 @@ body {
 }
 
 .c5 {
-    color: ;
+    color: #0a0a0a;
 }
 
 .c6 {
@@ -136,7 +135,7 @@ body {
 }
 
 .bgc5 {
-    background-color: ;
+    background-color: #0a0a0a;
 }
 
 .bgc6 {
@@ -163,8 +162,8 @@ body {
 .frame {
     position: fixed;
     width: 100%;
-    height: 5px;
-    background-color: #fff;
+    height: 10px;
+    background-color: var(--c1);
     z-index: 1000;
 }
 
@@ -176,7 +175,7 @@ body {
 .frame.frame-right {
     position: fixed;
     height: 100%;
-    width: 5px;
+    width: 10px;
     top: 0;
 }
 
@@ -192,7 +191,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 5px;
+    height: 10px;
     background-color:;
     z-index: 1001;
 }
@@ -217,6 +216,10 @@ a {
     background-color: var(--c5);
     z-index: 150;
     box-shadow: none;
+}
+
+.navlogo{
+    width: 50%;
 }
 
 #mainbox {
@@ -338,7 +341,7 @@ a {
 
 
     .nn {
-        font-size: 1em !important;
+        font-size:3em !important;
     }
 
     .navsuc {
@@ -366,7 +369,10 @@ a {
     
     
 
-    
+    .marq_wrap {
+    padding: 15px 70px !important;
+
+}
     
 
 
@@ -419,7 +425,12 @@ a {
 
 
 
-
+.logo{
+    position: fixed;
+    width: 80px;
+    top: 0px;
+    padding: 10px;
+}
 
 
 
@@ -492,16 +503,15 @@ a {
 .contenttitle {
     font-size: 70px;
     letter-spacing: 5px;
+    z-index: 5 !importamt;
 }
 
 .title {
     position: relative;
     margin: 0;
-    font-size: 85px;
     text-align: center;
     color: var(--pr-color);
     text-transform: uppercase;
-    mix-blend-mode: difference;
     z-index: 2;
 }
 
@@ -560,7 +570,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .section-title__square2 {
@@ -617,9 +627,9 @@ a {
 }
 
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 20;
+    z-index: -1;
     top: 0 !important;
 }
 
@@ -705,17 +715,22 @@ a {
 
 
 #firstsec {
-    padding-top: 150px;
     /*	padding-bottom: 50px;*/
     height: 100vh;
     position: relative;
 }
 
-.nn {
-    font-size: 1.8em;
+.nn{
+    position: relative;
+    font-size: 3em;
     font-weight: bolder;
     color: var(--c1);
     letter-spacing: 5px;
+}
+
+.title-container{
+    position: relative;
+    top: 30%;
 }
 
 .navsuc {
@@ -735,6 +750,7 @@ a {
     overflow: hidden;
     position: absolute;
     bottom: 0px !important;
+    z-index: 20;
 }
 
 
@@ -742,7 +758,7 @@ a {
     display: flex;
     width: 100%;
     height: auto;
-    padding: 8px 70px;
+    padding: 2px 70px;
 
 }
 
@@ -805,7 +821,6 @@ a {
     padding-top: 10px;
     margin-bottom: 50px;
     position: relative;
-    font-family: 'Syne', sans-serif;
     background-color: #fff;
 }
 
@@ -822,8 +837,8 @@ a {
     padding-top: 10px;
     margin-bottom: 50px;
     position: relative;
-    font-family: 'Syne', sans-serif;
-    z-index: 50;
+    z-index: 1;
+    background-color: var(--c5) !important;
 }
 
 .nnstroke {
@@ -835,8 +850,7 @@ a {
     padding-top: 10px;
     margin-bottom: 50px;
     position: relative;
-    font-family: 'Syne', sans-serif;
-    /*    background-color: var(--c1);*/
+    background-color: var(--c5);
 
 }
 
@@ -877,6 +891,15 @@ a {
     display: flex;
     justify-content: space-between;
     padding-top: 10%;
+}
+
+
+.exwrap {
+    border-radius: 10px;
+    background-color: var(--c5);
+    box-shadow: 0 10px 15px 20px rgba(0,0,0,0.5);
+    padding: 5%;
+    z-index: 200;
 }
 
 .about__img,
@@ -959,12 +982,10 @@ a {
 }
 
 
-/*
 
 .footer {
-    cursor: pointer;
+    background-color: var(--c5);
 }
-*/
 
 
 
@@ -980,7 +1001,8 @@ a {
     
 }
 
-.footer-col a {
+.footer-col a:hover {
+    color: var(--c4);
 
 }
 
@@ -1015,7 +1037,6 @@ a {
     overflow-x: hidden;
     background: #000;
     min-height: 100vh;
-    font-family: 'Open Sans', sans-serif;
 }
 
 

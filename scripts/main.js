@@ -1,5 +1,10 @@
+
 function openFunction() {
-    document.getElementById("menu").style.width = "400px";
+    if (window.innerWidth <= 480) {
+        document.getElementById("menu").style.width = "60%";
+    } else {
+        document.getElementById("menu").style.width = "30%";
+    }
     document.getElementById("mainbox").style.marginRight = "0px";
     document.getElementById("mainbox").innerHTML = "";
     blurElementsExceptSidemenu();

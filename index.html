@@ -71,15 +71,18 @@
 
     <div id="particles-js"></div>
     <nav class="navbar c1">
+        <div class="col-sm-1">
+                    <img src="style_sheets/pictures/logo1.png" width="100%" class="zmore nnxxs logo">
+                </div>
         <div id="mainbox" onclick="openFunction()">&#9776;</div>
         <div id="menu" class="sidemenu">
-            <a href="index.html" id="link1" class="ali tsb fon">Home</a>
-            
-            <a href="#" id="link2" class="ali tsb fon">About</a>
-            
-            <a href="Projects.html" id="link3" class="ali tsb fon">Works</a>
-            
-            <a href="#" id="link7" class="ali tsb fon">Contact</a>
+            <a href="index.html" id="link1" class="ali tsb fon2">Home</a>
+
+            <a href="#" id="link2" class="ali tsb fon2">About</a>
+
+            <a href="Projects.html" id="link3" class="ali tsb fon2">Works</a>
+
+            <a href="#" id="link7" class="ali tsb fon2">Contact</a>
             <div class="col-sm-10 mx-auto pt-5 m-5 navlogo">
                 <img src="style_sheets/pictures/nn.png" width="100%" class="">
             </div>
@@ -96,15 +99,21 @@
         <section id="firstsec">
 
             <div class="col-sm-12 nns zmore">
-                <div class="col-sm-1 mx-auto">
-                    <img src="style_sheets/pictures/nns.png" width="100%" class=" zmore nnxxs mx-auto d-block">
+<!--
+                <div class="col-sm-1">
+                    <img src="style_sheets/pictures/logo1.png" width="100%" class="zmore nnxxs logo">
                 </div>
+-->
             </div>
-            <h1 class="title" data-splitting>
-                <span class="nn fon1">NEXUS NODE</span>
-            </h1>
-            <div class="text-center navsuc zmore fon1">Navigating
-                Succeess</div>
+
+            <div class="title-container">
+
+                <h1 class="title fon1 " data-splitting>
+                    <span class="nn fon3">NEXUS NODE</span>
+                </h1>
+                <div class="text-center navsuc zmore fon1">Navigating
+                    Succeess</div>
+            </div>
 
 
             <div class="marq_box">
@@ -156,9 +165,10 @@
 
 
         <section id="thirdsec">
-            <div class="dis__wrapp  mx-auto d-block container">
+            <div class="dis__wrapp exwrap  mx-auto d-block container">
                 <h2 class="section-title fs-1 ">
                     <strong class="text-center fon2 contenttitle titlexs"> <span class="strokewe fon2">Discover </span>The Nexus Node dfference</strong>
+                    
                     <span class="section-title__square"></span>
                 </h2>
 
@@ -222,7 +232,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-sm-4">
+                    <div class="footer-col col-sm-3">
                         <img src="style_sheets/pictures/nn.png" width="100%">
                     </div>
                     <div class="footer-col col-sm-4">
@@ -246,9 +256,10 @@
                     </div>
                 </div>
             </div>
-            
-           
-            <div class="text-center c6 pt-5 pb-3"> <hr style="height: 3px;">© 2020. Nexus Node
+
+
+            <div class="text-center c6 pt-5 pb-3">
+                <hr style="height: 3px;">© 2020. Nexus Node
             </div>
         </footer>
 
@@ -314,8 +325,8 @@
 
 
     <script>
-        //        Splitting();
-        //        luxy.init();
+        //                Splitting();
+        luxy.init();
 
     </script>
 
@@ -347,23 +358,21 @@
 
         const cursor = document.querySelector('.cursor');
         document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+            cursor.setAttribute("style", "top: " + (e.pageY - 1) + "px; left: " + (e.pageX - 1) + "px;")
         })
 
- document.addEventListener('click', () => {
-    cursor.classList.add("expand");
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
 
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
 
 
 
         let circle = new CircleType(document.getElementById('Circle-Txt'));
         circle.raduis(360);
-
-
 
     </script>
 
