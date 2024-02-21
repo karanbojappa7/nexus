@@ -5,7 +5,7 @@ html {
 body {
     background: var(--second-color);
     overflow-x: hidden;
-    cursor: none;
+    /*    cursor: none;*/
 }
 
 /******************************************/
@@ -45,6 +45,11 @@ body {
     -webkit-user-drag: none;
     -ms-user-select: none;
 }
+
+
+
+
+
 
 :root {
     --c1: #ffffff;
@@ -155,12 +160,130 @@ body {
 }
 
 
+.frame {
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    z-index: 1000;
+}
 
-a {
-    text-decoration: none;
+.frame.frame-top {
+    top: 0;
+}
+
+.frame.frame-left,
+.frame.frame-right {
+    position: fixed;
+    height: 100%;
+    width: 5px;
+    top: 0;
+}
+
+.frame.frame-left {
+    left: 0;
+}
+
+.frame.frame-right {
+    right: 0;
+}
+
+.frame.frame-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color:;
+    z-index: 1001;
+}
+
+.content {
+    margin-bottom: 10px;
 }
 
 
+
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    height: 6vh;
+    width: 100%;
+    background-color: var(--c5);
+    z-index: 150;
+    box-shadow: none;
+}
+
+#mainbox {
+    font-size: 1.8em;
+    transition: all .6s;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    color: var(--c1);
+    cursor: pointer !important;
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: var(--c1);
+    z-index: 1;
+    padding-top: 100px;
+    overflow-x: hidden;
+    transition: all .5s;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.sidemenu a {
+    padding: 8px 8px 8px 64px;
+    font-size: 40px;
+    color: var(--c2);
+    display: block;
+    cursor: pointer !important;
+}
+
+.sidemenu a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--c4);
+    transition: 300ms;
+}
+
+.sidemenu a:hover::after {
+    width: 15%;
+}
+
+.sidemenu a:hover,
+#mainbox:hover {
+    color: var(--c4);
+    transition: .5s;
+}
+
+.sidemenu .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 80%;
+    font-size: 36px;
+    margin-left: 32px;
+    color: var(--c2);
+    cursor: pointer;
+    z-index: 10 !important;
+}
+
+.blur {
+    filter: blur(4px);
+}
 
 /*Fonts for Css*/
 
@@ -208,65 +331,18 @@ a {
         top: 8px !important;
     }
 
-    .wwd {
-        top: -90px !important;
-        left: 12% !important;
-        font-size: .8em;
-    }
-
-    .arrow {
-        width: 20% !important;
-        left: 20%;
-        top: 0px !important;
-    }
-
-    .ns {
-        font-size: 3em !important;
-    }
-
-    .succ {
-        top: -25px !important;
-        left: 40px;
-    }
-
-    .sideimg {
-        position: relative;
-        top: 0px !important;
-        width: 50% !important;
-    }
-
-    .descsx {
-        position: relative;
-        top: -50px;
-    }
-
-    .the,
-    .diff,
-    .node,
-    .nexus {
-        font-size: 3.5em !important;
-    }
-
-
-    .ns {
-        font-size: 3em !important;
-    }
 
 
 
-    .succ {
-        transform: rotate(-10deg);
-        position: relative;
-        top: -30px !important;
-        left: 0px !important;
-    }
+
+
 
     .nn {
-        font-size: .3em !important;
+        font-size: 1em !important;
     }
 
     .navsuc {
-        font-size: 3em !important;
+        font-size: 2em !important;
         padding-top: 10% !important;
     }
 
@@ -275,61 +351,28 @@ a {
     }
 
     .about__p {
-        font-size: 12px !important;
+        font-size: 13px !important;
     }
+    
+    
+    .titlexs{
+        font-size: 40px !important;
+        
+    }
+    
+    .discover__head{
+        font-size: 30px !important;
+    }
+    
+    
+
+    
+    
 
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-    .wwd {
-        left: 0px !important;
-        width: 100%;
-        top: -80px !important;
-    }
-
-    .imgnn {
-        width: 100% !important;
-        left: -40px !important;
-        top: 8px !important;
-    }
-
-    .sideimg {
-        width: 200% !important;
-        top: 225px !important;
-    }
-
-
-    .the,
-    .diff,
-    .node,
-    .nexus {
-        font-size: 3em !important;
-    }
-
-    .ns {
-        font-size: 5em !important;
-    }
-
-
-
-    .succ {
-        transform: rotate(-10deg);
-        position: relative;
-        top: -50px !important;
-        left: 0px !important;
-    }
-
-    .arrow {
-        top: 10px !important;
-        width: 150%;
-        left: 100%;
-    }
-
-
-
-
-}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {}
 
 
 
@@ -337,26 +380,13 @@ a {
 @media only screen and (min-width: 1281px) {}
 
 
-/* End of Media Queries     */
-
-
-/*Nav bar start*/
 
 
 
 /*  --------------------------- Codes Start's From Here ---------------------------------*/
 
 
-/* Paralax Effect On GSAP **********************************/
-/* header ********/
 
-
-/*
-section {
-	padding-top: 150px;
-	padding-bottom: 50px;
-}
-*/
 
 .wrapp {
     width: 100%;
@@ -364,6 +394,7 @@ section {
     overflow: hidden;
     z-index: 1;
 }
+
 
 .wrapp2 {
     width: 100%;
@@ -531,6 +562,7 @@ section {
     transform: translate(-50%, -50%);
     z-index: -1;
 }
+
 .section-title__square2 {
     position: absolute;
     display: inline-block;
@@ -618,157 +650,6 @@ section {
 }
 
 
-#sec2 {
-    background-color: var(--c2);
-    padding: 5%;
-    z-index: 10;
-}
-
-
-.the {
-    font-size: 4em;
-    position: relative;
-    top: -50px;
-}
-
-.diff {
-    font-size: 4em;
-    position: relative;
-    top: -70px;
-}
-
-.node {
-    font-size: 4em;
-    position: relative;
-    top: -80px;
-}
-
-.nexus {
-    font-size: 4em;
-    position: relative;
-    top: -40px;
-    left: 5px;
-}
-
-.ln {
-    font-size: 1.5em;
-}
-
-
-.sideimg {
-    position: relative;
-    top: 80px;
-}
-
-#sec3 {
-    background-color: var(--c1);
-    padding: 5%;
-}
-
-
-.ns {
-    font-size: 4em;
-}
-
-
-
-.succ {
-    transform: rotate(-10deg);
-    position: relative;
-    top: -120px;
-    left: 40px;
-}
-
-.arrow {
-    position: relative;
-    top: -80px;
-    right: 50px;
-
-}
-
-
-#sec4 {
-    background: var(--c2);
-    padding: 5%;
-}
-
-.wel {
-    font-size: 2em;
-}
-
-
-.custom-container {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "main""footer";
-    overflow-x: hidden;
-    background: #000;
-    min-height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.footer {
-    --footer-background: #34a4e8;
-    display: grid;
-    position: relative;
-    grid-area: footer;
-    min-height: 12rem;
-}
-
-.bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1rem;
-    background: var(--footer-background);
-    filter: url("#blob");
-}
-
-.bubble {
-    position: absolute;
-    left: var(--position, 50%);
-    background: var(--footer-background);
-    border-radius: 100%;
-    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-        bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-    transform: translate(-50%, 100%);
-}
-
-.content {
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 4rem;
-    padding: 2rem;
-    background: var(--footer-background);
-}
-
-/* Add styles for links, b, p, and other elements */
-
-@keyframes bubble-size {
-
-    0%,
-    75% {
-        width: var(--size, 4rem);
-        height: var(--size, 4rem);
-    }
-
-    100% {
-        width: 0rem;
-        height: 0rem;
-    }
-}
-
-@keyframes bubble-move {
-    0% {
-        bottom: -4rem;
-    }
-
-    100% {
-        bottom: var(--distance, 10rem);
-    }
-}
 
 
 
@@ -831,7 +712,7 @@ section {
 }
 
 .nn {
-    font-size: 1em;
+    font-size: 1.8em;
     font-weight: bolder;
     color: var(--c1);
     letter-spacing: 5px;
@@ -899,12 +780,10 @@ section {
 
 #Circle-Txt {
     font-size: 7px;
-    font-family: 'Fredoka One', cursive;
     text-transform: uppercase;
     animation: rounded 10s linear infinite;
     color: orange;
-    letter-spacing: 5px;
-    padding: 2px;
+    letter-spacing: 1px;
 }
 
 .cursor {
@@ -944,6 +823,7 @@ section {
     margin-bottom: 50px;
     position: relative;
     font-family: 'Syne', sans-serif;
+    z-index: 50;
 }
 
 .nnstroke {
@@ -956,8 +836,8 @@ section {
     margin-bottom: 50px;
     position: relative;
     font-family: 'Syne', sans-serif;
-/*    background-color: var(--c1);*/
-    
+    /*    background-color: var(--c1);*/
+
 }
 
 
@@ -1039,7 +919,7 @@ section {
     -webkit-text-stroke: 1px var(--c1);
     text-transform: uppercase;
     letter-spacing: 3px;
-        color: var(--c1);
+    color: var(--c1);
 }
 
 
@@ -1079,14 +959,14 @@ section {
 }
 
 
+/*
 
 .footer {
     cursor: pointer;
 }
+*/
 
-.cufix {
-    z-index: 150;
-}
+
 
 .footer-col ul {
     list-style: none;
@@ -1097,11 +977,10 @@ section {
 .footer-col ul li {
     list-style: none;
     padding: 10px;
-
+    
 }
 
 .footer-col a {
-    color: var(--c6) !important;
 
 }
 
@@ -1125,6 +1004,50 @@ section {
     color: var(--c1) !important;
     transition: .5s;
 }
+
+
+
+
+.custom-container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main""footer";
+    overflow-x: hidden;
+    background: #000;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.footer-title{
+    font-size: 35px !important;
+    text-transform: uppercase;
+}
+
+.footer {
+    --footer-background: #34a4e8;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+
+.footanchor{
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: var(--c1)
+}
+
+
+/*
+.footanchor{
+    letter-spacing: 1px;
+    font-size: 20px
+}
+*/
+
+
 
 
 

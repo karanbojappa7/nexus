@@ -1,31 +1,27 @@
- function openFunction(){
-  document.getElementById("menu").style.width="300px";
-  document.getElementById("mainbox").style.marginRight="0px";
-  document.getElementById("mainbox").innerHTML="";
- }
-function closeFunction(){
- document.getElementById("menu").style.width="0px";
- document.getElementById("mainbox").style.marginRight="0px";
- document.getElementById("mainbox").innerHTML="&#9776; ";
+function openFunction() {
+    document.getElementById("menu").style.width = "400px";
+    document.getElementById("mainbox").style.marginRight = "0px";
+    document.getElementById("mainbox").innerHTML = "";
+    blurElementsExceptSidemenu();
 }
 
-
-
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
+function closeFunction() {
+    document.getElementById("menu").style.width = "0px";
+    document.getElementById("mainbox").style.marginRight = "0px";
+    document.getElementById("mainbox").innerHTML = "&#9776; ";
+    removeBlurFromSidemenu();
 }
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
+function blurElementsExceptSidemenu() {
+    var elementsToBlur = document.getElementsByClassName("wrapp");
+    for (var i = 0; i < elementsToBlur.length; i++) {
+        elementsToBlur[i].classList.add("blur");
+    }
 }
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+function removeBlurFromSidemenu() {
+    var elementsToBlur = document.getElementsByClassName("wrapp");
+    for (var i = 0; i < elementsToBlur.length; i++) {
+        elementsToBlur[i].classList.remove("blur");
+    }
+}
