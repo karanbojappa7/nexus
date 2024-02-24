@@ -129,6 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     discover();
+    
+    
+    
+
+
+
 
 
 
@@ -222,8 +228,95 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     about();
+    
+    
+        function contact() {
+        gsap.from('.contact__head', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '#contactsec1',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+    }
+    contact();  
+    
+        function location() {
+        gsap.from('.location__head', {
+            x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+            scrollTrigger: {
+                trigger: '.social-links',
+                start: 'top bottom',
+                scrub: 1.9
+            }
+        })
+    }
+    location();
+        
+        function mail() {
+     gsap.to('.mail', {
+            scrollTrigger: {
+                trigger: '#contactsec2',
+                start: 'top top',
+                scrub: 1.9
+            },
+            yPercent: -150
+        })
+    }
+    mail();
+    
+    
 
+
+    
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
