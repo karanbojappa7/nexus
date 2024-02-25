@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 start: 'top top',
                 scrub: 1.9
             },
-            yPercent: -150
+            yPercent: -50
         })
     }
     mail();

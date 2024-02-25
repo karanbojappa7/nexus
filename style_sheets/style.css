@@ -1388,3 +1388,59 @@ label {
     box-shadow: none;
     outline: none;
 }
+
+
+
+
+#worksec1 {
+    width: 100%;
+    background-color: var(--c2);
+    padding-bottom: 5%;
+}
+
+
+.work-wrapper{
+    position: relative;
+    padding-top: 150px;
+}
+
+.ww, .wp{
+    font-size: 6em;
+    
+}
+
+.workdes{
+    font-size: 1.5em;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
