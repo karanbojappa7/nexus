@@ -1417,24 +1417,73 @@ label {
 
 
 
+#worksec2 {
+    width: 100%;
+    background-color: var(--c2);
+    padding-bottom: 5%;
+}
 
 
 
 
+.img-box{
+    width: 100%;
+    padding: 5%
+}
+
+/*
+
+#text{
+    height: 100vh;
+}
+*/
+
+/*
+.anim-wrapper{
+    padding-top: 300px;
+    z-index: 5;
+}
+*/
+
+.anim-top, .anim-bot, .anim-left, .anim-right{
+    z-index: 10;
+    font-size: 3em;
+    color: var(--c1);
+    z-index: 1;
+}
+
+
+.anim-left{
+    position: relative;
+    top: 530px
+}
+
+.anim-right{
+    position: relative;
+    top: -330px;
+}
+
+.anim-top{
+    position: relative;
+    top: 230px;
+}
 
 
 
+.anim-img {
+  height: 100vh; /* Set container height to viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    position: relative;
+    top: 150px;
+    z-index: 3;
+}
 
-
-
-
-
-
-
-
-
-
-
+.animg {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  max-height: 100%; /* Ensure the image doesn't exceed its container height */
+}
 
 
 

@@ -25,13 +25,123 @@ document.addEventListener("DOMContentLoaded", function () {
             animation: tween,
             scrub: 1,
             invalidateOnRefresh: true,
-//            markers: true
+            //            markers: true
         });
     }
 
     // Call the function to setup races scroll
     setupRacesScroll();
-    
+
+    //    
+    //    function text(){
+    //         gsap.to('.anim-top', {
+    //            scrollTrigger: {
+    //                trigger: '.anim-wrapper',
+    //                start: "top 50%",
+    //                scrub: 1.9,
+    //                 markers: true,
+    //            },
+    //            yPercent: -250
+    //        })
+    //    }
+    //    
+    //    
+    //    text();
+    //    
+    //        function text2(){
+    //         gsap.to('.anim-bot', {
+    //            scrollTrigger: {
+    //                trigger: '.anim-wrapper',
+    //                start: "top 50%",
+    //                scrub: 1.9,
+    //                 markers: true,
+    //            },
+    //            yPercent: 250
+    //        })
+    //    }
+    //    
+    //    
+    //    text2();
+    //    
+    //    
+
+    function imageresize() {
+        const tl = gsap.timeline();
+
+        tl.set(".animg", {
+            scale: 1
+        });
+
+        gsap.to(".animg", {
+            scale: 0.2,
+            duration: 50,
+            scrollTrigger: {
+                trigger: "#text",
+                start: "top 15%",
+                end: "bottom 130%",
+                scrub: true,
+                markers: true,
+            }
+        });
+
+        gsap.to('.anim-top', {
+            duration: 5,
+            scrollTrigger: {
+                trigger: '#text',
+                start: "top 15%",
+                end: "bottom 50%",
+                scrub: 1.5,
+//                markers: true,
+            },
+            yPercent: 450,
+
+        });
+
+
+        gsap.to('.anim-bot', {
+            scrollTrigger: {
+                trigger: '#text',
+                start: "top 15%",
+                end: "bottom 70%",
+                scrub: 0.9,
+                //                markers: true,
+            },
+            yPercent: -250,
+
+        });
+
+        gsap.to('.anim-left', {
+            scrollTrigger: {
+                trigger: '.anim-top',
+                start: "top 15%",
+                end: "bottom 70%",
+                scrub: 0.9,
+                //                markers: true,
+            },
+            xPercent: 10,
+
+        });
+
+        gsap.to('.anim-right', {
+            scrollTrigger: {
+                trigger: '.anim-top',
+                start: "top 15%",
+                end: "bottom 70%",
+                scrub: 0.9,
+                //                markers: true,
+            },
+            xPercent: -10,
+
+        });
+
+
+
+    }
+
+    imageresize();
+
+
+
     const gTl = gsap.timeline();
     gTl.from(".title .char", 1, {
         opacity: 0,
@@ -111,12 +221,12 @@ document.addEventListener("DOMContentLoaded", function () {
     sec();
 
 
-    
 
-    
-    
-    
-    
+
+
+
+
+
 
     function discover() {
         gsap.from('.discover__head', {
@@ -129,9 +239,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     discover();
-    
-    
-    
+
+
+
 
 
 
@@ -228,9 +338,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     about();
-    
-    
-        function contact() {
+
+
+    function contact() {
         gsap.from('.contact__head', {
             x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
             scrollTrigger: {
@@ -240,9 +350,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
-    contact();  
-    
-        function location() {
+    contact();
+
+    function location() {
         gsap.from('.location__head', {
             x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
             scrollTrigger: {
@@ -253,9 +363,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     location();
-        
-        function mail() {
-     gsap.to('.mail', {
+
+    function mail() {
+        gsap.to('.mail', {
             scrollTrigger: {
                 trigger: '#contactsec2',
                 start: 'top top',
@@ -265,58 +375,13 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
     mail();
-    
-    
 
 
-    
+
+
+
+
+
+
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
