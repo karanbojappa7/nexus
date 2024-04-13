@@ -64,81 +64,75 @@ document.addEventListener("DOMContentLoaded", function () {
     //    text2();
     //    
     //    
+    
+    
+    
 
-    function imageresize() {
-        const tl = gsap.timeline();
+function imageresize() {
+    const tl = gsap.timeline();
 
-        tl.set(".animg", {
-            scale: 1
-        });
+    tl.set(".animg", {
+        scale: 1
+    });
 
-        gsap.to(".animg", {
-            scale: 0.2,
-            duration: 50,
-            scrollTrigger: {
-                trigger: "#text",
-                start: "top 15%",
-                end: "bottom 130%",
-                scrub: true,
-                markers: true,
-            }
-        });
+    gsap.to(".animg", {
+        scale: 0.2,
+        duration: 50,
+        scrollTrigger: {
+            trigger: "#text",
+            start: "top 15%",
+            end: "bottom 130%",
+            scrub: 0.05, // Adjusted scrub value to make it slower
+            markers: true,
+        }
+    });
 
-        gsap.to('.anim-top', {
-            duration: 5,
-            scrollTrigger: {
-                trigger: '#text',
-                start: "top 15%",
-                end: "bottom 50%",
-                scrub: 1.5,
-//                markers: true,
-            },
-            yPercent: 450,
-
-        });
-
-
-        gsap.to('.anim-bot', {
-            scrollTrigger: {
-                trigger: '#text',
-                start: "top 15%",
-                end: "bottom 70%",
-                scrub: 0.9,
-                //                markers: true,
-            },
-            yPercent: -250,
-
-        });
-
-        gsap.to('.anim-left', {
-            scrollTrigger: {
-                trigger: '.anim-top',
-                start: "top 15%",
-                end: "bottom 70%",
-                scrub: 0.9,
-                //                markers: true,
-            },
-            xPercent: 10,
-
-        });
-
-        gsap.to('.anim-right', {
-            scrollTrigger: {
-                trigger: '.anim-top',
-                start: "top 15%",
-                end: "bottom 70%",
-                scrub: 0.9,
-                //                markers: true,
-            },
-            xPercent: -10,
-
-        });
+    gsap.to('.anim-top', {
+        duration: 5,
+        scrollTrigger: {
+            trigger: '#text',
+            start: "top 15%",
+            end: "bottom 50%",
+            scrub: 0.2, // Adjusted scrub value to make it slower
+        },
+        yPercent: 450,
+    });
 
 
+    gsap.to('.anim-bot', {
+        scrollTrigger: {
+            trigger: '#text',
+            start: "top 15%",
+            end: "bottom 70%",
+            scrub: 0.1, // Adjusted scrub value to make it slower
+        },
+        yPercent: -250,
+    });
 
-    }
+    gsap.to('.anim-left', {
+        scrollTrigger: {
+            trigger: '.anim-top',
+            start: "top 15%",
+            end: "bottom 70%",
+            scrub: 0.1, // Adjusted scrub value to make it slower
+        },
+        xPercent: 10,
+    });
 
-    imageresize();
+    gsap.to('.anim-right', {
+        scrollTrigger: {
+            trigger: '.anim-top',
+            start: "top 15%",
+            end: "bottom 70%",
+            scrub: 0.1, // Adjusted scrub value to make it slower
+        },
+        xPercent: -10,
+    });
+
+}
+
+imageresize();
+
 
 
 
