@@ -74,18 +74,38 @@ function imageresize() {
     tl.set(".animg", {
         scale: 1
     });
+    
+    
 
-    gsap.to(".animg", {
-        scale: 0.2,
-        duration: 50,
-        scrollTrigger: {
-            trigger: "#text",
-            start: "top 15%",
-            end: "bottom 130%",
-            scrub: 0.05, // Adjusted scrub value to make it slower
-            markers: true,
+// Start with the image at full size and top-aligned
+gsap.set(".animg", {
+    scale: 1, // Full size
+    y: 0, // Top-aligned
+    transformOrigin: "center top", // Set transform origin to center top
+});
+
+// Animation to shrink the image and move it to the center
+gsap.to(".animg", {
+    scale: 0.1, // Shrink the image
+    duration: 5, // Duration of the animation
+    transformOrigin: "center center", // Set transform origin to center
+    scrollTrigger: {
+        trigger: ".anim",
+        start: "top 15%",
+        end: "bottom 130%",
+        scrub: 0.5, // Adjusted scrub value to make it slower
+        // markers: true,
+        onComplete: () => {
+            // Animation completed, scroll to the next section
+            const nextSection = document.getElementById("nextSection");
+            nextSection.scrollIntoView({ behavior: 'smooth' });
         }
-    });
+    }
+});
+
+    
+    
+    
 
     gsap.to('.anim-top', {
         duration: 5,
