@@ -94,7 +94,12 @@ gsap.to(".animg", {
         start: "top 15%",
         end: "bottom 130%",
         scrub: 0.5, // Adjusted scrub value to make it slower
-        markers: true,
+        // markers: true,
+        onComplete: () => {
+            // Animation completed, scroll to the next section
+            const nextSection = document.getElementById("nextSection");
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 });
 
