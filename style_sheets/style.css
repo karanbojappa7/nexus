@@ -292,11 +292,20 @@ a {
 
 
 .fon1 {
+    font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*
+.fon1 {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
 }
+*/
+
+
 
 .fon2 {
     font-family: "Mulish", sans-serif;
@@ -920,7 +929,7 @@ a {
 .exwrap {
     border-radius: 10px;
     background-color: var(--c5);
-    box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.5);
+/*    box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.5);*/
     padding: 5%;
     z-index: 200;
 }
@@ -1589,7 +1598,7 @@ label {
     top: 50%;
     left: 50%;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.185);
+/*    background-color: rgba(255, 255, 255, 0.185);*/
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -1602,14 +1611,14 @@ label {
     text-align: center;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 150px;
     flex-wrap: wrap; 
 }
 
 .text-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 @media (max-width: 767px) {
@@ -1621,43 +1630,3 @@ label {
     color: #FA9700;
     transition: 0.5s;
 }
-
-
-
-
-#nextSection{
-    display:flex;
-    align-items:center;
-    font-family:sans-serif;
-    flex-direction:column;
-    font-size:6rem;
-    -webkit-text-stroke: 1px white;
-    -webkit-text-fill-color: black;
-    -webkit-animation: fill 0.5s infinite alternate;
-    background:black;
-    width:100vw;
-    overflow-x:hidden;
-    justify-content:center;
-  }
-  
-  .left{
-    width:fit-content;
-    white-space:nowrap;
-    animation: example 10s linear 0.5s infinite;
-  }
-  @keyframes example {
-    0% {      
-      margin-left:0%;
-      opacity:0%;
-   }
-    10%{
-      opacity:100%;
-    }
-    90%{
-      opacity:100%;
-    }
-    100% {
-      margin-left:-100%;
-      opacity:0%;
-   }
-  }
