@@ -838,7 +838,7 @@ a {
     position: absolute;
     transition-duration: 50ms;
     transition-timing-function: ease-out;
-    /*    z-index: 100;*/
+       z-index: 100;
 }
 
 @keyframes rounded {
