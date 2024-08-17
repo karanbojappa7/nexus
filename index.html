@@ -55,7 +55,12 @@
     <!-- Add this script tag to include particle.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-
+    
+        <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+<script src="scripts/pace.js"></script>
+    
+    
+    
     <link rel="stylesheet" href="style_sheets/style.css">
 
 </head>
@@ -72,6 +77,42 @@
     <div class="frame frame-bottom"></div>
 -->
 
+    
+    
+    
+    <div id="preloader">
+    <div class="anim">
+        <div class="preloader">
+            <img src="style_sheets/pictures/logo1.png" alt="Preloader" class="preloader">
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+      <script>
+        paceOptions = {
+            ajax: true,
+            document: true,
+            eventLag: false
+        };
+        Pace.on('done', function() {
+            $('#preloader').delay(4000).animate({
+                top: '-110%'
+            }, 2000, $.bez([0.19, 1, 0.22, 1]));
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <div id="particles-js"></div>
     <nav class="navbar c1">
