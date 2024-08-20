@@ -344,7 +344,13 @@ a {
 
 
 
-@media only screen and (max-width: 575px) {}
+@media only screen and (max-width: 768px) {
+    
+    .nn {
+        font-size: 2em !important;
+    }
+    
+}
 
 /*Mobile Devices*/
 @media only screen and (max-width: 480px) {
@@ -366,7 +372,7 @@ a {
 
 
     .nn {
-        font-size: 3em !important;
+        font-size: 1.3em !important;
     }
 
     .navsuc {
